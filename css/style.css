@@ -10,7 +10,7 @@ Sections Background (Light Green): #e4ecdf;
 body {
     background-color: #ffffff;
     font-family: "Manrope", sans-serif;
-    font-size: 16px; /* Sets the font size to 16px */
+    font-size: 1.6rem; 
     font-weight: 300; /* Sets the font weight to 300 */
     line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
     color: #000000;
@@ -22,40 +22,37 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 2.75em;
+    font-size: 3.6rem;
     font-weight: 700;
 }
   
 h2 {
-    font-size: 2.25em;
+    font-size: 3.2rem;
     font-weight: 700;
 }
   
 h3 {
-    font-size: 1.75em;
+    font-size: 3em;
     font-weight: 400;
 }
 
-h4 {
-    font-size: 1.35em;
-    font-weight: 400;
-}
 
 img {
-    width: 50%; /* imgs are too big on 100% */
+    width: 100%; 
   }
 
   a {
     color: #ff7f50;
-    text-decoration: none; /* No underlining */
-  }
-  a:hover {
-    color: #cc6540;
-    text-decoration: underline; /* Underlining when hovering over a link */
   }
   a:visited { /* visited link */
     color: #ff7f50;
   }
+  a:hover 
+  a:focus {
+    color: #cc6540;
+    text-decoration: none; 
+  }
+ 
   a:active { /* selected link */
     color: #994c30;
   }
@@ -65,11 +62,18 @@ img {
     background-color: #ff7f50;
     color: #ffffff; /* needed to override the default link color */
     font-weight: 400;
-    padding: 10px;
+    padding: 10px 30px;
     border-radius: 3px;
     border-bottom: 2px solid #994c30; /* width of the border, type, color */
     transition: 0.2s opacity;
+    text-decoration: none;
   }
+
+
+  .button:visited {
+    color: #ffffff;
+  } 
+
 
   .button:hover {
     opacity: 0.8; /* Reduces the opacity of the button to 80% */
@@ -81,6 +85,10 @@ img {
     color: #ff7f50;
     text-transform: uppercase;
     border: 2px solid #ff7f50;
+  }
+
+  .button.contact:visited {
+    color: #ff7f50;
   }
 
   .button.contact:hover {

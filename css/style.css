@@ -5,6 +5,10 @@ Text Colour (Black): #000000;
 Sections Background (Light Green): #e4ecdf;
 */
 
+html {
+  font-size: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,208 +16,252 @@ Sections Background (Light Green): #e4ecdf;
 body {
     background-color: #ffffff;
     font-family: "Manrope", sans-serif;
-    font-size: 1.2rem; 
+    font-size: clamp(1rem, 0.8661rem + 0.5952vw, 1.3125rem); 
     font-weight: 300; /* Sets the font weight to 300 */
     line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
     color: #000000;
 }
   
-h1, h2, h3, h4 {
+h1, h2, h3 {
     line-height: 1.4;
     color: #496d4f;
 }
 
 h1 {
-    font-size: 2.0rem;
+    font-size: font-size: clamp(2rem, 1.7857rem + 0.9524vw, 2.5rem);
     font-weight: 700;
 }
   
 h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: clamp(1.75rem, 1.5357rem + 0.9524vw, 2.25rem);
+    font-weight: 550;
 }
   
 h3 {
-    font-size: 1.6rem;
+    font-size: clamp(1.5rem, 1.2589rem + 1.0714vw, 2.0625rem);
     font-weight: 400;
 }
-
 
 img {
     width: 100%; 
   }
 
-  a {
-    color: #ff7f50;
-  }
-  a:visited { /* visited link */
-    color: #ff7f50;
-  }
-  a:hover 
-  a:focus {
-    color: #cc6540;
-    text-decoration: none; 
-  }
+a {
+  color: #ff7f50;
+}
+
+a:visited { /* visited link */
+  color: #ff7f50;
+}
+
+a:hover 
+a:focus {
+  color: #cc6540;
+  text-decoration: none; 
+}
  
-  a:active { /* selected link */
-    color: #994c30;
-  }
+a:active { /* selected link */
+  color: #994c30;
+}
 
-  .button {
-    display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-    background-color: #ff7f50;
-    color: #ffffff; /* needed to override the default link color */
-    font-weight: 400;
-    padding: 10px 30px;
-    border-radius: 3px;
-    border-bottom: 2px solid #994c30; /* width of the border, type, color */
-    transition: 0.2s opacity;
-    text-decoration: none;
-    transition-property: opacity;
-  }
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #ff7f50;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px 30px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  transition: 0.2s opacity;
+  text-decoration: none;
+  transition-property: opacity;
+}
 
+.button:visited {
+  color: #ffffff;
+} 
 
-  .button:visited {
-    color: #ffffff;
-  } 
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
 
+.button.contact {
+  background-color: transparent;
+  color: #ff7f50;
+  text-transform: uppercase;
+  border: 2px solid #ff7f50;
+}
 
-  .button:hover {
-    opacity: 0.8; /* Reduces the opacity of the button to 80% */
-    text-decoration: none;
-  }
+.button.contact:visited {
+  color: #ff7f50;
+}
 
-  .button.contact {
-    background-color: transparent;
-    color: #ff7f50;
-    text-transform: uppercase;
-    border: 2px solid #ff7f50;
-  }
+.button.contact:hover {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
 
-  .button.contact:visited {
-    color: #ff7f50;
-  }
+.logo {
+  font-weight: 700;
+  color: #ffffff !important;
+  text-decoration: none;
+}
 
-  .button.contact:hover {
-    background-color: #ff7f50;
-    color: #ffffff;
-  }
+/* Layout styling */
 
+* {
+  box-sizing: border-box;
+}
 
+header {
+  background-color: #496d4f;
+  border-bottom: 3px solid #4a4a4a;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2)  ; 
+  position: fixed;
+  width: 100%;
+  padding-block: 0.5em;
+}
 
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
 
-  /* Layout styling */
+.container {
+  padding: 0 15px;
+}
 
-  * {
-    box-sizing: border-box;
-  }
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: auto;
+  gap: 2em;
+}
 
-  header {
-    background-color: #496d4f;
-    border-bottom: 3px solid #4a4a4a;
-    text-align: center;
-    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2)  ; 
-    position: fixed;
-    width: 100%;
-  }
+.project-card {
+  box-shadow: 0 2px 20px 0 rgba(0,0,0, 0.15);
+  padding: 1em;
+  border-radius: 1em;
+}
 
-  .container {
-    padding: 0 15px;
-  }
+.center {
+  text-align: center;
+}
 
-  .project-card {
-    margin: 25px 0
-  }
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1em;
+}
 
-  .center {
-    text-align: center;
-  }
+nav li {
+}
 
-  nav > ul {
-    list-style-type: none;
-    padding: 0;
-  }
+nav a {
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  color:#ffffff;
+  text-decoration: none;
+}
 
-  nav > ul > li {
-    display: inline-block;
-  }
+nav a:visited{
+  color:#FFFFFF;
+}
 
-  nav > ul > li > a {
-    padding: 0 15px;
-    text-transform: uppercase;
-    font-weight: 300;
-    color:#ff7f50;
-  }
+nav a:hover{
+  color:#FFFFFF;
+}
 
-  nav > ul > li > a:visited{
-    color:#ff7f50;
-  }
+nav a:active{
+  color: #994c30;
+}
 
-  nav > ul > li > a:hover{
-    color:#cc6540;
-  }
+.welcome {
+  background-color: #e4ecdf;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
 
-  nav > ul > li > a:active{
-    color: #994c30;
-  }
+.welcome span {
+  display: block;
+  font-size: 70%;
+  margin-block-start: 0.5em;
+}
 
-  #welcome {
-    background-color: #e4ecdf;
-    padding: 20px 0;
-    display: inline-block;
-    width: 100%;
-  }
+main {
+  padding-top: 93.22px;
+}
 
-  main {
-    padding-top: 133px;
-  }
+.socials a {
+  max-width: 3rem;
+  display: flex;
+}
 
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
-  [class*="col-"] {
-    float: left;
-    padding: 10px;
-  }
+.story-card__media-wrapper img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5em;
+  object-position: 0 58%;
+}
 
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+}
 
+.slider img{
+  width: 15rem;
+  border: 1px solid #c9c9c9;
+  border-radius: 1.2em;
+}
 
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
+
 @media only screen and (min-width: 640px) {
-  header {
-    text-align: unset;
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
   }
+
   nav {
     width: auto;
-    float: right;
-    margin-top: 4px;
   }
+
   main {
-    padding-top: 99px;
+    padding-top: 69.55px;
   }
-  #welcome span {
-    display: block;
-  }
-  .col-md-6 {
-    width: 50%;
-  }
-  body {
-    font-size: 1.6rem; 
-}
-h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-}
 
-h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-}
+  .project-card {
+    display: grid;
+    grid-template-columns: minmax(0,1fr)minmax(0,2fr);
+    grid-auto-rows: 1fr;
+    gap: 2em;
+  }
 
-h3 {
-  font-size: 2.0rem;
-  font-weight: 400;
-}
+  #about-picture {
+    width: 100%;
+  }
+
+  .project-card__media-wrapper img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 /* ==============================
@@ -225,29 +273,10 @@ Large devices (1024px or larger)
     margin-left: auto;
     margin-right: auto;
   }
-  .col-md-5 {
-    width: 40%;
-  }
-  .col-md-7 {
-    width: 60%;
-  }
-  body {
-    font-size: 2.0rem; 
-}
-h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
 
-h2 {
-  font-size: 2.6rem;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 2.4rem;
-  font-weight: 400;
-}
+  .projects-wrapper {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 

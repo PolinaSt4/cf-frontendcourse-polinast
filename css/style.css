@@ -7,6 +7,7 @@ Sections Background (Light Green): #e4ecdf;
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -123,14 +124,14 @@ header {
   padding-block: 0.5em;
 }
 
-header .container {
+header .navtoggle {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
-  gap: 0.5em;
+  position: relative;
 }
 
 .container {
@@ -159,16 +160,19 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 1em;
+  flex-direction: column;
 }
 
 
 nav a {
-  padding: 0;
+  padding: 15px 0;
   text-transform: uppercase;
   font-weight: 300;
   color:#ffffff;
   text-decoration: none;
+  display: block;
+  text-align: right;
+
 }
 
 nav a:visited{
@@ -197,7 +201,7 @@ nav a:active{
 }
 
 main {
-  padding-top: 93.22px;
+  padding-top: 44.59px;
 }
 
 .socials a {
@@ -260,14 +264,6 @@ footer {
   flex-grow: 1; /* Take available space */
 }
 
-.navtoggle ul {
-  display: flex; /* Horizontal alignment */
-  gap: 1rem; /* Add spacing between items */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .navtoggle li:last-child .icon {
   display: block; /* Hamburger menu */
 }
@@ -277,8 +273,12 @@ footer {
 }
 
 .navtoggle li .icon {
-  position: relative; /* Ensure proper alignment */
+  position: absolute; /* Ensure proper alignment */
   font-size: 1.5rem; /* Adjust size */
+  line-height: 1;
+  right: 0;
+  top: 2px;
+  padding: 0;
 }
 
 .navtoggle.responsive li  {
@@ -287,10 +287,11 @@ footer {
 
 .navtoggle.responsive nav {
   padding: 24px 0 0;
+  width: 100%;
 }
 .navtoggle.responsive li  {
   display: block;
-  padding: 10px 0;
+  padding: 0;
   border-top: 1px solid rgba(255,127,80,0.5);
 }
 
@@ -302,17 +303,23 @@ Medium devices (640px and larger)
 ================================= */
 
 @media only screen and (min-width: 640px) {
-  header .container {
+  header .navtoggle {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   nav {
     width: auto;
   }
 
+  nav ul {
+    flex-direction: row;
+    gap: 1em;
+  }
+
   main {
-    padding-top: 69.55px;
+    padding-top: 80.91px;
   }
 
   .project-card {
@@ -354,6 +361,10 @@ Large devices (1024px or larger)
 
   .projects-wrapper {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  main {
+    padding-top: 84.86px;
   }
 }
 

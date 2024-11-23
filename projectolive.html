@@ -9,18 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   </head>
 
   <body>
 
     <header>
       <div class="container">
+        <div class="navtoggle" id="myNavtoggle"></div>
         <a href="index.html" class="logo">Polina Steinmüller</a>
         <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="#contact">Contact</a></li>
+              <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fa-solid fa-bars"></i></a></li>
             </ul>
           </nav>
       </div>
@@ -168,6 +171,10 @@
           <p>&copy; 2024 Polina Steinmüller</p> 
         </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

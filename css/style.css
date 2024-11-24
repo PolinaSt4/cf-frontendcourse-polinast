@@ -319,10 +319,6 @@ Medium devices (640px and larger)
     display: none;
   }
 
-  .navtoggle li:last-child .icon {
-    display: none !important; /* Hamburger menu */
-  }
-
   /*.navtoggle.responsive nav {
     padding: 0;
     width: 0;*/

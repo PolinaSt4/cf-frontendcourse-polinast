@@ -8,11 +8,3 @@ function menuToggle() {
     document.removeEventListener('click', outsideClickListener);
   }
 }
-
-function outsideClickListener(event) {
-  var menu = document.getElementById('myNavtoggle');
-  if (!menu.contains(event.target) && menu.className.includes('responsive')) {
-    menu.className = 'navtoggle'; // Close the menu
-    document.removeEventListener('click', outsideClickListener); // Remove the listener
-  }
-}

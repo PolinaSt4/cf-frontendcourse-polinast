@@ -234,29 +234,6 @@ footer {
   border-radius: 1.2em;
 }
 
-
-/*.navtoggle {
-  position: relative;
-  display: flex; 
-  align-items: right;
-}
-
-
-.navtoggle li:not(:last-child) {
-  display: none;
-}
-
-.navtoggle, .navtoggle.responsive {
-  position: relative;
-}
-
-.navtoggle li .icon {
-  position: absolute;
-  right: 0;
-  top: 2px;
-  font-size: 20px;
-}*/
-
 .navtoggle {
   display: flex; /* Flex layout for nav */
   align-items: center; /* Center items vertically */
@@ -281,10 +258,6 @@ footer {
   padding: 0;
 }
 
-.navtoggle.responsive li  {
-  display: block;
-}
-
 .navtoggle.responsive nav {
   padding: 24px 0 0;
   width: 100%;
@@ -292,7 +265,7 @@ footer {
 .navtoggle.responsive li  {
   display: block;
   padding: 0;
-  border-top: 1px solid rgba(255,127,80,0.5);
+  /*border-top: 1px solid rgba(255,127,80,0.5);*/
 }
 
 .navtoggle.responsive li:last-child  {
@@ -345,7 +318,15 @@ Medium devices (640px and larger)
   .navtoggle li:last-child {
     display: none;
   }
- 
+
+  .navtoggle li:last-child .icon {
+    display: none !important; /* Hamburger menu */
+  }
+
+  /*.navtoggle.responsive nav {
+    padding: 0;
+    width: 0;*/
+  }
 }
 
 

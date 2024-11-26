@@ -48,11 +48,11 @@ img {
   }
 
 a {
-  color: #ff7f50;
+  color: #c96f6f; /* #ff7f50;*/
 }
 
 a:visited { /* visited link */
-  color: #ff7f50;
+  color:  #c96f6f; /*#ff7f50;*/
 }
 
 a:hover 
@@ -67,7 +67,7 @@ a:active { /* selected link */
 
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #ff7f50;
+  background-color:  #c96f6f; /*#ff7f50;*/
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
   padding: 10px 30px;
@@ -89,17 +89,17 @@ a:active { /* selected link */
 
 .button.contact {
   background-color: transparent;
-  color: #ff7f50;
+  color:  #c96f6f; /* #ff7f50;*/
   text-transform: uppercase;
-  border: 2px solid #ff7f50;
+  border: 2px solid  #c96f6f; /*#ff7f50;*/
 }
 
 .button.contact:visited {
-  color: #ff7f50;
+  color:  #c96f6f; /*#ff7f50;*/
 }
 
 .button.contact:hover {
-  background-color: #ff7f50;
+  background-color:  #c96f6f; /*#ff7f50;*/
   color: #ffffff;
 }
 
@@ -149,6 +149,13 @@ header .navtoggle {
   box-shadow: 0 2px 20px 0 rgba(0,0,0, 0.15);
   padding: 1em;
   border-radius: 1em;
+}
+
+.project-card img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5em;
+  object-position: 0 58%;
 }
 
 .center {
@@ -321,8 +328,19 @@ Medium devices (640px and larger)
 
   /*.navtoggle.responsive nav {
     padding: 0;
-    width: 0;*/
+    width: 0;
+  }*/
+
+  .mediablock img src {
+    width: 45%;
+    height: auto;
+    max-width: 100%;
   }
+
+  .slider img {
+    width: 10rem;
+  }
+
 }
 
 

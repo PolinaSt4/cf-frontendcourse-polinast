@@ -15,59 +15,61 @@ html {
 }
 
 body {
-    background-color: #ffffff;
-    font-family: "Manrope", sans-serif;
-    font-size: clamp(1rem, 0.8661rem + 0.5952vw, 1.3125rem); 
-    font-weight: 300; /* Sets the font weight to 300 */
-    line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-    color: #000000;
+  background-color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1rem, 0.8661rem + 0.5952vw, 1.3125rem); 
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #000000;
 }
-  
-h1, h2, h3 {
-    line-height: 1.4;
-    color: #496d4f;
+
+h1,
+h2,
+h3 {
+  line-height: 1.4;
+  color: #496d4f;
 }
 
 h1 {
-    font-size: font-size: clamp(2rem, 1.7857rem + 0.9524vw, 2.5rem);
-    font-weight: 700;
+  font-size: clamp(2rem, 1.7857rem + 0.9524vw, 2.5rem);
+  font-weight: 700;
 }
-  
+
 h2 {
-    font-size: clamp(1.75rem, 1.5357rem + 0.9524vw, 2.25rem);
-    font-weight: 550;
+  font-size: clamp(1.75rem, 1.5357rem + 0.9524vw, 2.25rem);
+  font-weight: 550;
 }
-  
+
 h3 {
-    font-size: clamp(1.5rem, 1.2589rem + 1.0714vw, 2.0625rem);
-    font-weight: 400;
+  font-size: clamp(1.5rem, 1.2589rem + 1.0714vw, 2.0625rem);
+  font-weight: 400;
 }
 
 img {
-    width: 100%; 
-  }
+  width: 100%;
+}
 
 a {
-  color: #c96f6f; /* #ff7f50;*/
+  color: #bf5555; /* #ff7f50; */
 }
 
 a:visited { /* visited link */
-  color:  #c96f6f; /*#ff7f50;*/
+  color: #bf5555; /* #ff7f50; */
 }
 
-a:hover 
+a:hover,
 a:focus {
   color: #cc6540;
-  text-decoration: none; 
+  text-decoration: none;
 }
- 
+
 a:active { /* selected link */
   color: #994c30;
 }
 
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color:  #c96f6f; /*#ff7f50;*/
+  background-color: #bf5555; /* #ff7f50; */
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
   padding: 10px 30px;
@@ -80,7 +82,7 @@ a:active { /* selected link */
 
 .button:visited {
   color: #ffffff;
-} 
+}
 
 .button:hover {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
@@ -89,17 +91,17 @@ a:active { /* selected link */
 
 .button.contact {
   background-color: transparent;
-  color:  #c96f6f; /* #ff7f50;*/
+  color: #bf5555; /* #ff7f50; */
   text-transform: uppercase;
-  border: 2px solid  #c96f6f; /*#ff7f50;*/
+  border: 2px solid  #bf5555; /* #ff7f50; */
 }
 
 .button.contact:visited {
-  color:  #c96f6f; /*#ff7f50;*/
+  color: #bf5555; /* #ff7f50; */
 }
 
 .button.contact:hover {
-  background-color:  #c96f6f; /*#ff7f50;*/
+  background-color: #bf5555; /* #ff7f50; */
   color: #ffffff;
 }
 
@@ -118,7 +120,7 @@ a:active { /* selected link */
 header {
   background-color: #496d4f;
   border-bottom: 3px solid #4a4a4a;
-  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2)  ; 
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
   padding-block: 0.5em;
@@ -170,7 +172,6 @@ nav ul {
   flex-direction: column;
 }
 
-
 nav a {
   padding: 15px 0;
   text-transform: uppercase;
@@ -179,18 +180,17 @@ nav a {
   text-decoration: none;
   display: block;
   text-align: right;
-
 }
 
-nav a:visited{
+nav a:visited {
   color:#FFFFFF;
 }
 
-nav a:hover{
+nav a:hover {
   color:#FFFFFF;
 }
 
-nav a:active{
+nav a:active {
   color: #994c30;
 }
 
@@ -235,7 +235,7 @@ footer {
   gap: 1em;
 }
 
-.slider img{
+.slider img {
   width: 15rem;
   border: 1px solid #c9c9c9;
   border-radius: 1.2em;
@@ -269,15 +269,16 @@ footer {
   padding: 24px 0 0;
   width: 100%;
 }
-.navtoggle.responsive li  {
+
+.navtoggle.responsive li {
   display: block;
   padding: 0;
-  /*border-top: 1px solid rgba(255,127,80,0.5);*/
 }
 
-.navtoggle.responsive li:last-child  {
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
 }
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -326,23 +327,10 @@ Medium devices (640px and larger)
     display: none;
   }
 
-  /*.navtoggle.responsive nav {
-    padding: 0;
-    width: 0;
-  }*/
-
-  .mediablock img src {
-    width: 45%;
-    height: auto;
-    max-width: 100%;
-  }
-
   .slider img {
     width: 10rem;
   }
-
 }
-
 
 /* ==============================
 Large devices (1024px or larger)
@@ -362,7 +350,6 @@ Large devices (1024px or larger)
     padding-top: 84.86px;
   }
 }
-
 
 @keyframes color-change {
   from {fill: #edc655;}
